@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-cache-keepalive"
+version = "0.1.0"
+description = "Provider-agnostic keepalive loop that keeps LLM prompt caches warm across idle gaps."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "cxk1993", email = "cxk264642@163.com" }]
+keywords = ["prompt-cache", "cache", "keepalive", "llm", "kv-cache", "cost-saving"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Source = "https://github.com/cxk1993/prompt-cache-keepalive"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
